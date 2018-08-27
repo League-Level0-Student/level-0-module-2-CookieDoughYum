@@ -11,14 +11,34 @@ import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
 public class AnimalFarm {
-
 	AnimalFarm() {
 		/*
 		 * 1. Ask the user which animal they want, then play the sound of that animal.
+		 
 		 */
+	
 		
 		/* 2. Make it so that the user can keep entering new animals. */
+		String Noise=JOptionPane.showInputDialog("What animal do you want?");
+	if(Noise.equals("Cow")) {
+		playMoo();
 	}
+	if(Noise.equals("Duck")) {
+		playQuack();
+	}
+	if(Noise.equals("Dog")) {
+		playWoof();
+	}
+	if(Noise.equals("Cat")) {
+		playMeow();
+	}
+	if(Noise.equals("llama")) {
+		playllama();
+	}
+	
+	
+	}
+	
 
 	void playMoo() {
 		playNoise(mooFile);
@@ -30,6 +50,12 @@ public class AnimalFarm {
 
 	void playWoof() {
 		playNoise(woofFile);
+	}
+	void playMeow() {
+	playNoise(meowFile);
+	}
+	void playllama() {
+	playNoise(llamaFile);
 	}
 
 	String quackFile = "quack.wav";
@@ -52,6 +78,8 @@ public class AnimalFarm {
 
 	public static void main(String[] args) {
 		new AnimalFarm();
+		
 	}
 
 }
+
